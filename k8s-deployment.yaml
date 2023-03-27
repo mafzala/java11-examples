@@ -1,0 +1,21 @@
+# simple-docker-image Deployment YAML
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld
+spec:
+  selector:
+	matchLabels:
+  	app: simple-docker-image
+  template:
+	metadata:
+  	labels:
+    	app: simple-docker-image
+	spec:
+  	containers:
+  	- name: simple-docker-image
+    	image: afzal/simple-docker-image
+    	resources:
+      	limits:
+        	memory: "128Mi"
+        	cpu: "500m"
