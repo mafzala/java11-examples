@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld
+  name: simple-docker-image
 spec:
   selector:
 	matchLabels:
